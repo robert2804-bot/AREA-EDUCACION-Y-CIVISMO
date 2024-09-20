@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educación y Civismo - Ayuntamiento</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Encabezado / Navegación -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Sobre Nosotros</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección Hero -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1>Área de Educación y Civismo</h1>
+            <p>Fomentamos el respeto y la convivencia a través de programas educativos y de civismo.</p>
+        </div>
+        <!-- Banner de imágenes -->
+        <div class="banner">
+            <img src="IMAGENES/file (1).jpg" class="active" alt="Imagen del programa educativo en acción">
+            <img src="IMAGENES/file.jpg" alt="Imagen de una charla educativa">
+            <img src="IMAGENES/file (3).jpg" alt="Imagen de una actividad comunitaria">
+        </div>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="about" class="about">
+        <h2>Sobre Nosotros</h2>
+        <p>El departamento de Educación y Civismo del Ayuntamiento se encarga de organizar actividades, programas y recursos educativos para fomentar el civismo y la responsabilidad ciudadana entre nuestros vecinos.</p>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="services" class="services">
+        <h2>Misión</h2>
+        <p>La misión de Educación y Civismo Atlacomulco es promover la participación activa de los ciudadanos y fomentar valores cívicos en la comunidad.</p>
+        
+        <h2>Visión</h2>
+        <p>La visión de Educación y Civismo Atlacomulco 2024 es ser un referente en la promoción de la educación cívica y el respeto en la sociedad.</p>
+    </section>
+
+    <!-- Cuadro para los botones -->
+    <div class="button-container">
+        <h3>Requisitos</h3>
+        <a href="requisitos-servicio-social.html" class="button">Requisitos Servicio Social</a>
+        <a href="requisitos-practicas-profesionales.html" class="button">Requisitos Prácticas Profesionales</a>
+    </div>
+
+   <!-- Sección Contacto -->
+   <section id="contact" class="contact">
+    <h2>Contacto</h2>
+    <p>Email: coordinacion.educacion@atlacomulco.gob.mx</p>
+    <p>Teléfono: 712 122 5920</p>
+    <p>Dirección: Av. José María Morelos y Pavón, No 06, Col. Centro</p>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Ayuntamiento de Educación y Civismo. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const banners = document.querySelectorAll('.banner img');
+        let currentIndex = 0;
+
+        function changeBanner() {
+            banners[currentIndex].style.opacity = '0'; // Desvanece la imagen actual
+            currentIndex = (currentIndex + 1) % banners.length; // Mueve al siguiente índice
+            banners[currentIndex].style.opacity = '1'; // Muestra la nueva imagen
+        }
+
+        setInterval(changeBanner, 3000); // Cambia cada 3 segundos
+    </script>
+
+</body>
+</html>
